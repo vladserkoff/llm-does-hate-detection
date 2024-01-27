@@ -1,0 +1,24 @@
+[tool.black]
+line-length = 120
+
+[tool.isort]
+line_length = 120
+profile = "black"
+
+[tool.pylint.master]
+extension-pkg-whitelist = ["numpy", "torch", "cv2"]
+generated-members = ["numpy.*", "torch.*", "cv2.*"]
+
+[tool.pylint.message_control]
+disable = [
+  "bad-continuation",
+  "invalid-name",
+  "too-few-public-methods",
+  "arguments-differ",
+]
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.ruff]
+line-length = 120

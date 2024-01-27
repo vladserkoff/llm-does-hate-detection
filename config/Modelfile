@@ -1,0 +1,8 @@
+FROM ../../results/ggufed/unsloth/mistral-7b-instruct-v0.2-bnb-4bit-unsloth.Q8_0.gguf
+
+TEMPLATE """[INST] ### Instruction: Below is a short text that you need to classify into one of three classes: Hate / Neutral / Supportive. 
+### Text: {{ .Prompt }} 
+### Answer: [/INST] 
+"""
+
+PARAMETER temperature 0.3
